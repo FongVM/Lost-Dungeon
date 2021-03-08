@@ -8,7 +8,7 @@ public class DarkWizard : MonoBehaviour
 {
     //Player property variable
     [SerializeField] private float speed = 0f;
-    public static int damage = 3;
+    public static int damage = 5;
     [SerializeField] private float attackCoolDown = 0f;
     public float timer;
     public GameObject shield;
@@ -22,13 +22,14 @@ public class DarkWizard : MonoBehaviour
 
 
     //take damage
-    public static int maxHealth = 10;
+    public static int maxHealth = 15;
     public static int currentHealth;
     private Material matWhite;
     private Material matDefault;
     private bool invincible;
     public AudioClip death;
     public AudioClip hurt;
+    public AudioClip skillcd;
 
 
     //move variable
@@ -185,16 +186,20 @@ public class DarkWizard : MonoBehaviour
     }
     void Shield()
     {
-        if (!isShield)
+        if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.B))
         {
-            if (timer <= 0)
+            if (!isShield)
             {
-                if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.B))
+                if (timer <= 0)
                 {
                     shield.SetActive(true);
                     invincible = true;
                     isShield = true;
-                    Invoke("ResetInvincible", 1.5f);
+                    Invoke("ResetInvincible", 2f);
+                }
+                else
+                {
+                    GetComponent<AudioSource>().PlayOneShot(skillcd);
                 }
             }
         }
@@ -206,9 +211,9 @@ public class DarkWizard : MonoBehaviour
         {
             currentHealth -= damage;
             sr.material = matWhite;
-            Invoke("ResetMaterial", 0.1f);
+            Invoke("ResetMaterial", 0.2f);
             invincible = true;
-            Invoke("ResetInvincible", 0.5f);
+            Invoke("ResetInvincible", 1f);
         }
 
     }

@@ -21,12 +21,12 @@ public class Upgrade : MonoBehaviour
     {
         if(PlayerSpawner.playerIndex == 1)
         {
-            AttackScript.damage += 2;
+            AttackScript.damage += 3;
             PlayerController.currentHealth = PlayerController.maxHealth;
         }
         else if (PlayerSpawner.playerIndex == 2)
         {
-            DarkWizard.damage += 2;
+            DarkWizard.damage += 3;
             DarkWizard.currentHealth = DarkWizard.maxHealth;
         }
         EnemyController.bossDeath = false;

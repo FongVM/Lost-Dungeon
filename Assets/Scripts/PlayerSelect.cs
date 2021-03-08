@@ -11,8 +11,8 @@ public class PlayerSelect : MonoBehaviour
         PlayerSpawner.playerIndex = 1;
         SceneManager.LoadScene(3);
         MainMenu.levelCount = 3;
-        AttackScript.damage = 4;
-        PlayerController.maxHealth = 15;
+        AttackScript.damage = 7;
+        PlayerController.maxHealth = 20;
         EnemySpawner.enemyCount = 0;
         EnemySpawner.wave = 0;
         BossSpawner.bossCount = 0;
@@ -25,8 +25,8 @@ public class PlayerSelect : MonoBehaviour
         PlayerSpawner.playerIndex = 2;
         SceneManager.LoadScene(3);
         MainMenu.levelCount = 3;
-        DarkWizard.damage = 3;
-        DarkWizard.maxHealth = 10;
+        DarkWizard.damage = 5;
+        DarkWizard.maxHealth = 15;
         EnemySpawner.enemyCount = 0;
         EnemySpawner.wave = 0;
         BossSpawner.bossCount = 0;

@@ -22,10 +22,11 @@ public class PlayerController : MonoBehaviour
     public float range;
     public AudioClip death;
     public AudioClip hurt;
+    public AudioClip skillcd;
     public float timer;
     public GameObject shield;
 
-    public static int maxHealth = 15;
+    public static int maxHealth = 20;
     public static int currentHealth;
 
     private Material matWhite;
@@ -59,9 +60,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Timer();
         if(currentHealth > 0)
         {
+            Timer();
             Move();
             //aim();
             Flip();
@@ -116,9 +117,9 @@ public class PlayerController : MonoBehaviour
             currentHealth -= damage;
             GetComponent<AudioSource>().PlayOneShot(hurt);
             sr.material = matWhite;
-            Invoke("ResetMaterial", 0.1f);
+            Invoke("ResetMaterial", 0.2f);
             invincible = true;
-            Invoke("ResetInvincible", 0.5f);
+            Invoke("ResetInvincible", 1f);
         }
     }
 
@@ -135,16 +136,20 @@ public class PlayerController : MonoBehaviour
     }
     void Shield()
     {
-        if(!isShield)
+        if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.B))
         {
-            if (timer <= 0)
+            if (!isShield)
             {
-                if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.B))
+                if (timer <= 0)
                 {
                     shield.SetActive(true);
                     invincible = true;
                     isShield = true;
-                    Invoke("ResetInvincible", 1.5f);
+                    Invoke("ResetInvincible", 2f);
+                }
+                else
+                {
+                    GetComponent<AudioSource>().PlayOneShot(skillcd);
                 }
             }
         }

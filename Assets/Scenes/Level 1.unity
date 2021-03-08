@@ -31161,6 +31161,11 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 9f350f70d044d9d4a9b27c4e3b9e54df, type: 3}
+    - target: {fileID: 1597356601214573090, guid: b067be8f00ad6734bbc63a454d2a3a8f,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 1597356601214573091, guid: b067be8f00ad6734bbc63a454d2a3a8f,
         type: 3}
       propertyPath: m_Name
@@ -31226,6 +31231,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1597356601214573093, guid: b067be8f00ad6734bbc63a454d2a3a8f,
+        type: 3}
+      propertyPath: BossBGM2
+      value: 
+      objectReference: {fileID: 8300000, guid: eeb4864e8a3bd1a4a9d23158e7e67a90, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b067be8f00ad6734bbc63a454d2a3a8f, type: 3}
 --- !u!1001 &2514683001331098469

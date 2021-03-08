@@ -46,7 +46,6 @@ public class EnemyController : MonoBehaviour
         {
             Move();
             Flip();
-            Invoke("ResetMaterial", 1f);
         }
         else
         {
@@ -110,6 +109,7 @@ public class EnemyController : MonoBehaviour
         currentHealth -= damage;
         sr.material = matWhite;
         Instantiate(damageNum, this.transform.position, Quaternion.identity);
+        Invoke("ResetMaterial", 0.2f);
     }
     void ResetMaterial()
     {

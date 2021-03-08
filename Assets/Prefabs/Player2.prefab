@@ -238,6 +238,7 @@ MonoBehaviour:
   displayHealth: {fileID: 0}
   death: {fileID: 8300000, guid: 8e5db664b4ccede45bd4db155943998b, type: 3}
   hurt: {fileID: 8300000, guid: 6d8f99bd4c2521f4093268ad633aecf0, type: 3}
+  skillcd: {fileID: 8300000, guid: 17022567a62bdc241a6a309fca9e6b51, type: 3}
   moveDirection: {x: 0, y: 0}
   canMove: 0
   fire: {fileID: 8300000, guid: 4d9549ff7c98b9e43ac0f013523f44e2, type: 3}
@@ -278,7 +279,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 1
   Mute: 0

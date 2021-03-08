@@ -13,7 +13,7 @@ public class AttackScript : MonoBehaviour
     public AudioClip swordSwing;
     public AudioSource audioSrc;
     public float attackRange = 0.5f;
-    public static int damage = 4;
+    public static int damage = 7;
     private PlayerController pc;
     private float force;
     public float attackRate;

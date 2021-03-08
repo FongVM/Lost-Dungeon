@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossSpawner : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class BossSpawner : MonoBehaviour
     public AudioClip BossSpawn;
     AudioSource audioSrc;
     public static int bossCount;
-
+    private int currentLevel;
     public static bool roomOne;
     public static bool roomTwo;
     public static bool roomThree;
@@ -20,6 +21,7 @@ public class BossSpawner : MonoBehaviour
     {
         isPlayed = false;
         bossCount = 0;
+        currentLevel = SceneManager.GetActiveScene().buildIndex;
         roomOne = false;
         roomTwo = false;
         roomThree = false;
@@ -34,7 +36,7 @@ public class BossSpawner : MonoBehaviour
         {
             if (player.CompareTag("Player"))
             {
-                if (MainMenu.levelCount == 5)
+                if (currentLevel == 5)
                 {
                     if (roomOne && roomTwo && roomThree && roomFour)
                     {
@@ -44,7 +46,6 @@ public class BossSpawner : MonoBehaviour
                         StartCoroutine(DestroyOverTime());
                     }
                 }
-
                 else
                 {
                     boss.SetActive(true);

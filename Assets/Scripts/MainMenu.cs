@@ -7,6 +7,8 @@ public class MainMenu : MonoBehaviour
 {
     public static int levelCount = 3;
     public GameObject playerSelect;
+    public GameObject helpPanel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,16 @@ public class MainMenu : MonoBehaviour
     {
         this.gameObject.SetActive(false);
         playerSelect.SetActive(true);
+    }
+    public void Help()
+    {
+        this.gameObject.SetActive(false);
+        helpPanel.SetActive(true);
+    }
+    public void HelpBack()
+    {
+        this.gameObject.SetActive(true);
+        helpPanel.SetActive(false);
     }
     public void QuitGame()
     {

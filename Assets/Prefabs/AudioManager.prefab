@@ -46,10 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   victoryBGM: {fileID: 8300000, guid: 18fb08b3c42ef464ab73a76070427963, type: 3}
   BossBGM1: {fileID: 8300000, guid: eeb4864e8a3bd1a4a9d23158e7e67a90, type: 3}
-  BossBGM2: {fileID: 8300000, guid: 4a6096b0705bb4544949beed10979542, type: 3}
+  BossBGM2: {fileID: 8300000, guid: eeb4864e8a3bd1a4a9d23158e7e67a90, type: 3}
   BossBGM3: {fileID: 8300000, guid: 4a6096b0705bb4544949beed10979542, type: 3}
   closeSound: {fileID: 8300000, guid: 1a6516209ce89f842a92615f60dc3cf7, type: 3}
-  openSound: {fileID: 8300000, guid: 08de11ba3cde6f343824251b03cab3ba, type: 3}
 --- !u!82 &1597356601214573090
 AudioSource:
   m_ObjectHideFlags: 0
@@ -62,7 +61,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9f350f70d044d9d4a9b27c4e3b9e54df, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 1
   Mute: 0
